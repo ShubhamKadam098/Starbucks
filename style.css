@@ -241,6 +241,7 @@ input[type="text"]{
 
 .btn-barista{
     padding: 8px 20px;
+    cursor: pointer;
     width: auto;
     height: auto;
     border-radius: 25px;
@@ -323,6 +324,7 @@ input[type="text"]{
     width: 85px;
     height: 85px;
     border-radius: 8px;
+    object-fit: cover;
 }
 .barista-inner .name{
     font-size: 15px;
