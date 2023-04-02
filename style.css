@@ -65,6 +65,7 @@ ul{
 .btn-sm{
     height: 10px;
     width: auto;
+    font-size: 12px;
 }
 .btn-md{
     height: 10px;
@@ -112,10 +113,9 @@ input[type="text"]{
 }
 .navbar-container{
     display: flex;
-    margin-top: 15px;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
+    padding: 15px 0px;
 }
 .current{
     font-weight: bold;
@@ -165,10 +165,9 @@ input[type="text"]{
     color: #fff;
     font-weight: lighter;
     width: 100%;
-    height: 78px;
+    /* height: 78px; */
     align-items: center;
     margin-bottom: 28px;
-    padding-top: 80px;
 }
 .reward-container{
     display: flex;
@@ -176,15 +175,17 @@ input[type="text"]{
     align-items: center;
     font-weight: lighter;
     font-size: 12px;
-    padding-bottom: 10px;
-    /* height: 28px; */
+    padding: 12px 24px 18px;
+    margin-top:  12px;
+    margin-bottom: 12px;
+
 }
 .btn-reward{
     margin-right: 20px;
     padding: 7px 10px;
     height: auto;
 }
-.box{
+.reward-container .box{
     font-weight: lighter;
 }
 
@@ -193,10 +194,12 @@ input[type="text"]{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 190px;
+    height: auto;
     justify-content: space-between;
+    margin-bottom: 50px;
 }
 .hand-box1{
+    margin-bottom: 1em;
     color: #1e3932;
     font-weight: bold;
 }
@@ -253,7 +256,7 @@ input[type="text"]{
     background-color: #0e382c;
     transition: all 0.3s;
 }
-.barista-container{
+/* .barista-container{
     background: url(./Images/BaristaBackground.svg) no-repeat;
     background-position-x: 100%;
     background-size: 60px;
@@ -285,7 +288,7 @@ input[type="text"]{
     justify-content: space-between;
     align-items: stretch;
 }
-.barista-inner{
+.barista-box2 .barista-inner{
     cursor: pointer;
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -338,7 +341,88 @@ input[type="text"]{
 }
 .barista-inner .veg{
     padding: 0;
+} */
+
+.barista{
+    background-color: #edebe9;
 }
+.barista-container{
+    width: 100%;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2em;
+    padding-bottom: 4em;
+}
+.barista-box1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.barista-box1 h4{
+    font-size: 24px;
+    color: #0e382c;
+    font-weight: bold;
+}
+.barista-box2{
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    justify-content: space-around;
+    
+}
+.barista-card{
+    width: 25%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 2px #00000012, 0 2px 2px #0000000f, 0 1px 3px #0000001a;
+    padding: 1em 1.5em;
+    border-radius: 5px;
+    border: rgba(0, 0, 0, .175) solid 1px;
+}
+.brst-inner1{
+    display: flex;
+}
+.brst-inner1  img{
+    object-fit: cover;
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+}
+.brst-inner1 .veg {
+    width: 16px;
+    height: 16px;
+    border-radius: 0;
+}
+.brst-inner1 .name{
+    font-size: 14px;
+    font-weight: 600;
+}
+.brst-inner1 .info{
+    font-size: 10px;
+    font-weight: light;
+}
+.brst-name{
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 1rem;
+    row-gap: 3px;
+    word-wrap: break-word;
+}
+.brst-inner2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.brst-inner2 .brst-price h1{
+    font-size: 14px;
+}
+.brst-inner2 .brst-btn{
+}
+
 
 
 
@@ -529,31 +613,86 @@ input[type="text"]{
 }
 
 
-@media (max-width: 768px){
+
+/* Media Query */
+
+@media(max-width:768px){
+    .container{
+        width: 95%;
+    }
     .navbar-container{
         flex-direction: column;
-        gap: 15px;
+        gap: 30px;
         position: relative;
-
+        margin-bottom: 30px;
+        padding-bottom: 10px;
     }
     .navbar-container .box2{
-        width: 80%;
-        justify-content: space-around;
-        align-self: center;
-        align-items: center;
+        margin-right: 0px;
         padding-right: 0px;
+        align-items: center;
+        justify-content: space-around;
+        width: 90%;
     }
     .navbar-container .box2 li{
-        margin-right: 0;
+        margin: 0px;
+        align-self: center;
+    }
+    .navbar-container .box3{
+        width: 80%;
+        padding-left: 0;
+    }
+    .navbar-container .box4 {
+        position: absolute;
+        right: 0;
+        top: 7;
+    }
+    .reward{
+        margin-top: 0px;
+        height: auto;
+        width: auto;
+    }
+    .reward-container{
+        padding-bottom: 0;
     }
 
-    .navbar-container .box3{
-        padding-left:  0;
-        width: 80%;
+    
+    .hand-container{
+        margin-bottom: 0;
     }
-    .navbar-container .box4{
-        position: absolute;
-        right: 1rem;
+    .hand-container .hand-box1{
+        margin-bottom: 20px;
+    }
+    .hand-container .hand-box2{
+        justify-content: space-around;
+    }
+    .hand-container .hand-box2 li{
+        width: 30%;
+    }
+    .hand-container .hand-box2 .hand-box{
+        margin-bottom: 30px;
+    }
+
+    .barista-inner{
+        overflow: hidden;
+        border: black solid 1px;
+        
+    }
+    .barista-box2 li{
+        border: black solid 1px;
+        border: black solid 1px;
+    }
+
+    .special-container{
+        font-size: small;
+
+    }
+    .special-container .btn-lg{
+        padding: 8px 20px;
+    }
+
+    .footer-container{
+        gap: 200px;
     }
 
 }
