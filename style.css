@@ -110,6 +110,7 @@ input[type="text"]{
     top: 0;
     background-color: #fff;
     width: 100%;
+    z-index: 1;
 }
 .navbar-container{
     display: flex;
@@ -256,93 +257,6 @@ input[type="text"]{
     background-color: #0e382c;
     transition: all 0.3s;
 }
-/* .barista-container{
-    background: url(./Images/BaristaBackground.svg) no-repeat;
-    background-position-x: 100%;
-    background-size: 60px;
-    margin-top: 65px;
-    width: 100%;
-    min-height: 200px;
-    background-color: #edebe9;
-    padding-bottom:60px;
-    margin-bottom: 75px;
-}
-
-.barista{
-    display: flex;
-    flex-direction: column;
-}
-.barista-box1{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #1e3932;
-    font-weight: bold;
-    padding: 30px 0px;
-}
-.barista-box1 h1{
-    font-weight: 700;
-}
-.barista-box2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-}
-.barista-box2 .barista-inner{
-    cursor: pointer;
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 3fr 2fr;
-    column-gap: 12px;
-    width: 350px;
-    height: 125px;
-    border-radius: 10px;
-    padding: 15px 20px;
-    background-color: #fff;
-    border: #0000003f solid 1px;
-    margin-right: 25px;
-}
-.barista-inner:last-child{
-    margin-right: 0px;
-}
-.barista-inner .item1{
-    grid-column-start: 1;
-    grid-column-end: 2;
-}
-.barista-inner .item2{
-    padding-top: 5px;
-    grid-column-start: 2;
-    grid-column-end: 4;
-}
-.barista-inner .item3{
-    align-self: center;
-    justify-self: flex-start;
-    font-size: 17px;
-    color: #000000e3;
-}
-.barista-inner .item4{
-    align-self: center;
-    justify-self: flex-end;
-}
-.barista-inner .photo{
-    width: 85px;
-    height: 85px;
-    border-radius: 8px;
-    object-fit: cover;
-}
-.barista-inner .name{
-    font-size: 15px;
-    padding-bottom: 4px;
-    font-weight: bold ;
-}
-.barista-inner .info{
-    font-size: 10px;
-    color: #00000088;
-}
-.barista-inner .veg{
-    padding: 0;
-} */
-
 .barista{
     background-color: #edebe9;
 }
@@ -619,8 +533,15 @@ input[type="text"]{
 
 
 /* Media Query */
-
+/* Tablet */
 @media(max-width:768px){
+    .btn-lg{
+        font-size: 12px;
+        margin-top: 10px;
+        padding: 8px 15px;
+        width: 120px;
+        font-weight: 600;
+    }
     .container{
         width: 95%;
     }
@@ -659,8 +580,6 @@ input[type="text"]{
     .reward-container{
         padding-bottom: 0;
     }
-
-    
     .hand-container{
         margin-bottom: 0;
     }
@@ -708,14 +627,133 @@ input[type="text"]{
     }
    
 }
-@media(max-width:375px){
+/* mobile large */
+@media(max-width:425px){
+    .navbar-container{
+        position: sticky;
+    }
+    .navbar-container .box2{
+        justify-content: space-between;
+    }
+    .reward h1{
+        font-size: 12px;
+        font-weight: normal;
+    }
+    .reward-container {
+        padding-left: auto;
+        padding-right: auto;
+        padding-top: 0px;
+    }
+    .reward-container .box .btn-reward{
+        font-size: 12px;
+        padding: 5px 10px;
+        margin: 0px;
+    }
+    .hand-container img{
+        width: 80px;
+        height: 80px;
+    }
+    .barista-container {
+        position: relative;
+        padding-bottom: 6em;
+    }
+    .barista-container .barista-box1 button{
+        position: absolute;
+        bottom: 3em;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .barista-container .barista-box1 .menu-btn{
+        color: #fff;;
+        border: #000 solid 1px ;
+        background-color: #000;
+        height: 32px;
+        width: 120px;
+    }
+    .special-container .special-box2-inner{
+        font-size: 12px;
+    }
+    .special-container{
+        position: relative;
+    }
+    .special-container .special-box3{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding-right: 5px;
+        padding-bottom: 25px;
+    }
+    .learn-container{
+        position: relative;
+        padding-bottom: 7em;
+    }
+    .learn-container .learn-inner1 .right{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: 3em;
+    }
+    .btn-learn{
+        border: #000 solid 1px ;
+        background-color: #000;
+        color: #fff;
+        height: 32px;
+        width: 150px;
+        font-weight: 600;
+    }
+    .learn-container .learn-inner2{
+        position: relative;
+    }
+    .learn-container .learn-inner2-box{
+        position: absolute;
+        bottom: 35px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 0px;
+        z-index: 0;
+    }
+    .learn-container .learn-inner2-box button{
+        font-size: 12px;
+        margin-top: 10px;
+        padding: 8px 15px;
+        width: 120px;
+        font-weight: 600;
+    }
+    .learn-container .learn-inner2 h1{
+        font-size: 20px;
+    }
+    .learn-container .learn-inner2 p{
+        font-size: 14px;
+    }
+    .footer-container{
+        padding-left: 15px;
+    }
+    .footer-container .outer1{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer-container  h1{
+        font-size: 18px;
+        font-weight: bold ;
+        margin-bottom: 16px;
+    }
+    .footer-container .social-media{
+        flex-direction: row;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+    .footer-container .social-box2 img{
+        width: 150px;
+    }
+    .footer-container .outer1 .links a{
+        display: none;
+    }
     .footer-container .outer2{
         display: flex;
         flex-direction: column;
     }
     .footer-container .outer2 .innerlist{
         flex-direction: column;
-        margin-left: 15px;
     }
     .footer-container .outer2 .innerlist li {
         flex-direction: column;
@@ -725,5 +763,17 @@ input[type="text"]{
     }
     .footer-container .outer2-inner2{
         align-self: center;
+    }
+}
+/* Mobile Small */
+@media(max-width:425px){
+    .reward-container {
+        padding: 12px 16px;
+        margin: 0px;
+        gap: 10px;
+    }
+    .reward-container .btn-reward{
+        width: 96px;
+        height: 32px;
     }
 }
